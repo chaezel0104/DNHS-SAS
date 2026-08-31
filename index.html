@@ -9,12 +9,17 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>QR Attendance</title>
+  <meta
+    name="theme-color"
+    content="#0755c9">
+
+  <title>Dalandanan National High School - QR Attendance</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- QR Scanner -->
-  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <script
+    src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js">
+  </script>
 
 </head>
 
@@ -22,49 +27,160 @@
 
   <main class="app">
 
-    <h1>QR Attendance</h1>
+    <!-- SCHOOL HEADER -->
+    <header class="school-header">
 
-    <div id="scanner"></div>
+      <img
+        src="school-logo.jpg"
+        class="school-logo"
+        alt="Dalandanan National High School Logo">
 
+      <div class="school-name">
+        <h1>DALANDANAN</h1>
+        <h2>NATIONAL HIGH SCHOOL</h2>
+        <p>VALENZUELA CITY</p>
+      </div>
+
+    </header>
+
+
+    <!-- TITLE -->
+    <section class="title-section">
+
+      <h3>QR ATTENDANCE</h3>
+
+      <p>
+        Scan your QR code to record attendance
+      </p>
+
+    </section>
+
+
+    <!-- SCANNER -->
+    <section class="scanner-card">
+
+      <div id="scanner"></div>
+
+      <div class="scanner-instruction">
+
+        <span class="camera-icon">📷</span>
+
+        <span>
+          Position the QR code within the frame
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- START CAMERA -->
     <button
       id="startCamera"
       class="start-button">
+
+      <span>📷</span>
+
       START CAMERA
+
     </button>
 
-    <div class="code-box">
 
-      <div class="label">
-        SCANNED CODE
+    <!-- SCANNED CODE -->
+    <section class="code-card">
+
+      <div class="code-title">
+
+        <span class="qr-icon">▣</span>
+
+        <span>SCANNED CODE</span>
+
       </div>
 
-      <div id="scannedCode">
+      <div
+        id="scannedCode"
+        class="scanned-code">
+
         —
+
       </div>
 
-    </div>
+    </section>
 
-    <div class="buttons">
+
+    <!-- ATTENDANCE BUTTONS -->
+    <section class="attendance-buttons">
 
       <button
         id="timeIn"
-        class="time-in"
+        class="attendance-button time-in"
         disabled>
-        TIME IN
+
+        <span class="button-icon">→</span>
+
+        <span>
+          <strong>TIME IN</strong>
+          <small>Record Time In</small>
+        </span>
+
       </button>
+
 
       <button
         id="timeOut"
-        class="time-out"
+        class="attendance-button time-out"
         disabled>
-        TIME OUT
+
+        <span class="button-icon">→</span>
+
+        <span>
+          <strong>TIME OUT</strong>
+          <small>Record Time Out</small>
+        </span>
+
       </button>
 
-    </div>
+    </section>
 
-    <div id="message" class="message">
-      Tap START CAMERA.
-    </div>
+
+    <!-- STATUS -->
+    <section class="status-card">
+
+      <div class="status-icon">
+        ✓
+      </div>
+
+      <div>
+
+        <div
+          id="message"
+          class="status-message">
+
+          Tap START CAMERA.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <strong>
+        Dalandanan National High School
+      </strong>
+
+      <span>
+        Valenzuela City
+      </span>
+
+      <small>
+        QR Attendance System
+      </small>
+
+    </footer>
 
   </main>
 
