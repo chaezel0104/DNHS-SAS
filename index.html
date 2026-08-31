@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>QR Attendance</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- QR Scanner -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+  <main class="app">
+
+    <h1>QR Attendance</h1>
+
+    <div id="scanner"></div>
+
+    <button
+      id="startCamera"
+      class="start-button">
+      START CAMERA
+    </button>
+
+    <div class="code-box">
+
+      <div class="label">
+        SCANNED CODE
+      </div>
+
+      <div id="scannedCode">
+        —
+      </div>
+
+    </div>
+
+    <div class="buttons">
+
+      <button
+        id="timeIn"
+        class="time-in"
+        disabled>
+        TIME IN
+      </button>
+
+      <button
+        id="timeOut"
+        class="time-out"
+        disabled>
+        TIME OUT
+      </button>
+
+    </div>
+
+    <div id="message" class="message">
+      Tap START CAMERA.
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
